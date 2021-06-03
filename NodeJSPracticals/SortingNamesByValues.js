@@ -1,24 +1,39 @@
-const arr = ["Cad","ged","bed","abc"]
-let min = 0
-let map = new Map()
-const new_arr = []
+const list = ["ddc","ec123","dea","ec111","bed","abc"]
+const sorted_array = []
 
-for(const s of arr){
-    str = s.replace(/\s+/g, '').toLowerCase()
-    let value = 0
-    for(let j = 0; j< str.length; j++){
-        value = value + str.charCodeAt(j)
-    }
+
+function sortingStringsByValue(arr){
    
-    if(map.has(value)){
-        value += 1
-    }
-    map.set(value,str)
+    for(const s of arr){
+        let str = s.replace(/\s+/g, '').toLowerCase()
+        let temp_str = str
+        let value = 0
+        let dg = 0
+       
+        if(temp_str.match(/\d+/g) !== null){
+            let new_str = temp_str.split(/(\d+)/)
+            str = new_str[0]
+            dg = new_str[1]
+        }
+       
+        for(let j = 0; j< str.length; j++){
+            value = value + (str.charCodeAt(j)-96)
+        }
    
+        sorted_array.push({value,str : (dg>0) ? str+dg : str})
+       
 }
 
-let new_map = new Map([...map.entries()].sort())
+    return sorted_array.sort((a, b) => {
+      if (a.value > b.value) return 1
+      if(a.value === b.value){
+          if(a.str[0] > b.str[0]) return 1
+          return (Number(a.str.match(/(\d+)/g)[0]) - Number((b.str.match(/(\d+)/g)[0])));
+      }
+      return -1
+    })
+}
 
-new_map.forEach((value)=>{
-    console.log(value)
+sortingStringsByValue(list).forEach((value)=>{
+    console.log(value.str)
 })
