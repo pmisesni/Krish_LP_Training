@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "fName":"Issath",
+        "lName":"Sesni",
+        "addressline1":"111, Main Road,",
+        "addressline2":"Colombo",
+        "mobile":766345234
+    },
+    {
+        "id":1,
+        "fName":"Kamal",
+        "lName":"Kasan",
+        "addressline1":"111, sengaladi road,",
+        "addressline2":"chennai",
+        "mobile":8765438901
+    },
+    {
+        "id":1,
+        "fName":"Suresh",
+        "lName":"Murugan",
+        "addressline1":"87,Jaya Mawatha,",
+        "addressline2":"Colombo - 11",
+        "mobile":723456890
+    }
+]
