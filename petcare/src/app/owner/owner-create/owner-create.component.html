@@ -1,0 +1,67 @@
+<div style="text-align: center">
+    <h3>Register New Owner</h3><br/>
+</div>
+
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form" *ngIf=!submitted>
+      <div>
+
+        <div class="form-group">
+          <label >Enter first name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="fName"
+          />
+          <br/>
+        </div>
+  
+        <div class="form-group">
+          <label>Enter last name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="lName"
+          />
+          <br/>
+        </div>
+
+        <div class="form-group">
+            <label>Enter addressline 1</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="addressline1"
+            />
+            <br/>
+          </div>
+
+          <div class="form-group">
+            <label>Enter addressline 2</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="addressline2"
+            />
+            <br/>
+          </div>
+
+          <div class="form-group">
+            <label>Enter mobile number</label>
+            <input
+              type="text" pattern="[0-9]+"
+              class="form-control"
+              [(ngModel)]="mobile"
+            />
+            <br/>
+          </div>
+  
+          <button class="btn btn-success" type="submit" (click)="submitOwner()">Submit</button>
+          <button class="btn btn-reset" type="reset" (click)="cancelOwner()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="submitted">
+    <h3>You have successfully created</h3>
+  </div>

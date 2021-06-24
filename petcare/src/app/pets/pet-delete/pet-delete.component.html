@@ -1,0 +1,46 @@
+<div style="text-align: center">
+    <h3>Delete Pet Details</h3><br/>
+</div>
+
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div>
+
+        <div class="form-group">
+          <label >Pet Name</label>
+          <input disabled
+            type="text"
+            class="form-control"
+            [(ngModel)]="currentPet.petName"
+          />
+          <br/>
+        </div>
+  
+        <div class="form-group">
+          <label>Pet Type</label>
+          <input disabled
+            type="text"
+            class="form-control"
+            [(ngModel)]="currentPet.petType"
+          />
+          <br/>
+        </div>
+
+        <div class="form-group">
+            <label>Picture <Picture></Picture></label>
+            <div><img [src]="currentPet.img" *ngIf="currentPet.img"></div>
+            <input disabled
+              type="text"
+              class="form-control"
+              [(ngModel)]="currentPet.img"
+            />
+            <br/>
+          </div>
+  
+          <button class="btn btn-primary" type="submit" (click)="deletePet()">Delete</button> <button class="btn btn-reset" type="reset" (click)="cancelPet()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div>{{message}}</div>
+

@@ -1,0 +1,49 @@
+<div style="text-align: center">
+    <h3>Register New Pet</h3><br/>
+</div>
+
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+
+        <div class="form-group">
+          <label >Enter Pet Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="petName"
+          />
+          <br/>
+        </div>
+  
+        <div class="form-group">
+          <label>Enter Pet Type</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="petType"
+          />
+          <br/>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Picture<Picture></Picture></label>
+            <div><img [src]="img" *ngIf="img"></div>
+            <input
+              type="file"
+              class="form-control"
+              [(ngModel)]="img" 
+              (change)="selectFile($event)"
+            />
+            <br/>
+          </div>
+  
+          <button class="btn btn-success" type="submit" (click)="submitPet()">Submit</button>
+          <button class="btn btn-reset" type="reset" (click)="cancelPet()">Cancel</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You have successfully created</h3>
+      </div>
+    </div>
+  </div>

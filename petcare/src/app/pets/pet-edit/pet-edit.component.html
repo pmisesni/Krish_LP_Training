@@ -1,0 +1,47 @@
+<div style="text-align: center">
+    <h3>Update Pet Details</h3><br/>
+</div>
+
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div>
+
+        <div class="form-group">
+          <label >Enter Pet Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="currentPet.petName"
+          />
+          <br/>
+        </div>
+  
+        <div class="form-group">
+          <label>Enter Pet Type</label>
+          <input
+            type="text"
+            required
+            class="form-control"
+            [(ngModel)]="currentPet.petType"
+          />
+          <br/>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Picture<Picture></Picture></label>
+            <div><img [src]="currentPet.img" *ngIf="currentPet.img"></div>
+            <input
+              type="file"
+              class="form-control"
+              [(ngModel)]="currentPet.img"
+              (change)="selectFile($event)"
+            />
+            <br/>
+          </div>
+  
+          <button class="btn btn-primary" type="submit" (click)="updatePet()">Update</button> <button class="btn btn-reset" type="reset" (click)="cancelPet()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div>{{message}}</div>

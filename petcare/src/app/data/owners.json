@@ -1,26 +1,36 @@
-[
+{
+  "owners": [
     {
-        "id":1,
-        "fName":"Issath",
-        "lName":"Sesni",
-        "addressline1":"111, Main Road,",
-        "addressline2":"Colombo",
-        "mobile":766345234
+      "id": 2,
+      "fName": "Kamal",
+      "lName": "Kasan",
+      "addressline1": "111, sengaladi road,",
+      "addressline2": "chennai",
+      "mobile": 8765438901
     },
     {
-        "id":1,
-        "fName":"Kamal",
-        "lName":"Kasan",
-        "addressline1":"111, sengaladi road,",
-        "addressline2":"chennai",
-        "mobile":8765438901
+      "id": 3,
+      "fName": "Suresh",
+      "lName": "Murugan",
+      "addressline1": "87,Jaya Mawatha,",
+      "addressline2": "Colombo - 11",
+      "mobile": 723456890
     },
     {
-        "id":1,
-        "fName":"Suresh",
-        "lName":"Murugan",
-        "addressline1":"87,Jaya Mawatha,",
-        "addressline2":"Colombo - 11",
-        "mobile":723456890
+      "fName": "tutyu",
+      "lName": "hello",
+      "addressline1": "jasdhaksjd",
+      "addressline2": "sdfjkhdslfk",
+      "mobile": "3457678345",
+      "id": 4
+    },
+    {
+      "fName": "kamal",
+      "lName": "haasan",
+      "addressline1": "chennai",
+      "addressline2": "india",
+      "mobile": "65728340",
+      "id": 5
     }
-]
+  ]
+}

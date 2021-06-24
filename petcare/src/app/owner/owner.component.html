@@ -37,7 +37,10 @@
                     <td>{{o.addressline2}}</td>
                     <td>{{o.mobile}}</td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        <a class="btn btn-primary" (click)="getUpdateOwner(o.id)">Update</a>
+                        <a class="btn btn-primary" (click)="getDeleteOwner(o.id)">Delete</a>
+                    </td>
                 </tr>
             </tbody>
             </table>
