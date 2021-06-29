@@ -1,0 +1,16 @@
+server:
+  port: 8191
+#spring:
+#  profiles:
+#    active: native
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pmisesni/Krish_LP_Training/
+          default-label: main
+          search-paths:
+           - 'primary-config-store/*service'
+  
